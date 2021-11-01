@@ -1,10 +1,8 @@
-
 const DB = {
   data() {
     return {
       search: "",
-      itemList: [
-        {
+      itemList: [{
           "code": "ACC1",
           "name": "Apple granny smith",
           "weight": 40,
@@ -74,14 +72,14 @@ const DB = {
     }
   },
   computed: {
-    filteredOption: function() {
+    filteredOption: function () {
       return this.itemList.filter((option) => {
         let codeName = option.code.toLowerCase();
         let productName = option.name.toLowerCase();
         let categoryName = option.category.toLowerCase();
-        return codeName.match(this.search.toLowerCase())
-          || productName.match(this.search.toLowerCase())
-          || categoryName.match(this.search.toLowerCase());
+        return codeName.match(this.search.toLowerCase()) ||
+          productName.match(this.search.toLowerCase()) ||
+          categoryName.match(this.search.toLowerCase());
       })
     }
   }
@@ -92,7 +90,7 @@ const app = Vue.createApp(DB)
 app.component('single-item', {
   props: ['item'],
   methods: {
-    formatNumber: function(value) {
+    formatNumber: function (value) {
       return value.toLocaleString();
     }
   },
@@ -112,7 +110,7 @@ app.component('single-item', {
   <div class="category-code">
     <p class="category">{{item.category}}</p>
   </div>
-  <div class="updated-code">
+  <div class="updated-date">
     <p class="updated">{{item.date}}</p>
   </div>
   <div class="edit-qty">
