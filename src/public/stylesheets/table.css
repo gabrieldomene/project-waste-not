@@ -1,0 +1,65 @@
+.table {
+  display: grid;
+  grid-template: auto / 1fr;
+  row-gap: 1rem;
+}
+
+.table-head, .table-body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 0.5rem;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.table-head {
+  display: grid;
+  grid-template: auto / repeat(7, 1fr);
+  min-height: 36px;
+  border: 1px solid #000;
+  column-gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.table-head > div {
+  display: flex;
+  align-items: center;
+}
+
+.table-row {
+  display: grid;
+  grid-template: auto / repeat(7, minmax(130px, 1fr));
+  width: 100%;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.table-row .edit-qty {
+  display: flex;
+}
+
+.table-row .edit-qty p {
+  border: 1px solid #000;
+  padding: 0.5rem;
+}
+
+.table-row .edit-qty input {
+  border: 1px solid #000;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-left: 0;
+}
+
+.table-head .icon-sort {
+  margin-left: 0.1rem;
+}
+
+.table-head .name-code, 
+.table-head .package-code, 
+.table-head .unity-code, 
+.table-head .updated-date {
+  cursor: pointer;
+}
+

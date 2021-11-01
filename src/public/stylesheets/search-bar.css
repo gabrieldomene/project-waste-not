@@ -1,0 +1,28 @@
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.search-box input {
+  height: 36px;
+  padding: 0 0.5rem;
+  border: 1px solid #444;
+  border-right: 0;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.search-box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #444;
+}
